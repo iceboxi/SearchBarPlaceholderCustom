@@ -13,6 +13,7 @@
 		14271A7F1C4C846B001BFC61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14271A7D1C4C846B001BFC61 /* Main.storyboard */; };
 		14271A811C4C846B001BFC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14271A801C4C846B001BFC61 /* Assets.xcassets */; };
 		14271A841C4C846B001BFC61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14271A821C4C846B001BFC61 /* LaunchScreen.storyboard */; };
+		14271A8D1C4CB2FC001BFC61 /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 14271A8C1C4CB2FC001BFC61 /* MySearchBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		14271A801C4C846B001BFC61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14271A831C4C846B001BFC61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14271A851C4C846B001BFC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14271A8B1C4CB2FC001BFC61 /* MySearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
+		14271A8C1C4CB2FC001BFC61 /* MySearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				14271A7A1C4C846B001BFC61 /* ViewController.h */,
 				14271A7B1C4C846B001BFC61 /* ViewController.m */,
 				14271A7D1C4C846B001BFC61 /* Main.storyboard */,
+				14271A8B1C4CB2FC001BFC61 /* MySearchBar.h */,
+				14271A8C1C4CB2FC001BFC61 /* MySearchBar.m */,
 				14271A801C4C846B001BFC61 /* Assets.xcassets */,
 				14271A821C4C846B001BFC61 /* LaunchScreen.storyboard */,
 				14271A851C4C846B001BFC61 /* Info.plist */,
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14271A7C1C4C846B001BFC61 /* ViewController.m in Sources */,
+				14271A8D1C4CB2FC001BFC61 /* MySearchBar.m in Sources */,
 				14271A791C4C846B001BFC61 /* AppDelegate.m in Sources */,
 				14271A761C4C846B001BFC61 /* main.m in Sources */,
 			);
@@ -262,6 +268,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomSearchBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iceboxi.CustomSearchBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomSearchBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iceboxi.CustomSearchBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +306,7 @@
 				14271A8A1C4C846B001BFC61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
