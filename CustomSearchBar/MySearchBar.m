@@ -82,42 +82,31 @@
 
 - (UITextField *)getTextField
 {
-    for (UIView *v in [self allSubviews:self]) {
-        if ([NSStringFromClass(v.class) isEqualToString:@"UISearchBarTextField"]) {
-            return (UITextField *)v;
-        }
-    }
-    return nil;
+    return (UITextField *)ViewWithSuffix(self, @"UISearchBarTextField");
 }
 
 - (UILabel *)getTextFieldLabel
 {
-    for (UIView *v in [self allSubviews:self]) {
-        if ([NSStringFromClass(v.class) isEqualToString:@"UISearchBarTextFieldLabel"]) {
-            return (UILabel *)v;
-        }
-    }
-    return nil;
+    return (UILabel *)ViewWithSuffix(self, @"UISearchBarTextFieldLabel");
 }
 
 - (UIImageView *)getSearchIcon
 {
-    for (UIView *v in [self allSubviews:self]) {
-        if ([NSStringFromClass(v.class) isEqualToString:@"UIImageView"]) {
-            return (UIImageView *)v;
+    return (UIImageView *)ViewWithSuffix(self, @"UIImageView");
+}
+
+static UIView *ViewWithSuffix(UIView *view, NSString *classNameSuffix) {
+    if (!view || classNameSuffix.length == 0) return nil;
+    
+    UIView *theView = nil;
+    for (__unsafe_unretained UIView *subview in view.subviews) {
+        if ([NSStringFromClass(subview.class) hasSuffix:classNameSuffix]) {
+            return subview;
+        }else {
+            if ((theView = ViewWithSuffix(subview, classNameSuffix))) break;
         }
     }
-    return nil;
+    
+    return theView;
 }
-
-- (NSArray *)allSubviews:(UIView *)view
-{
-    NSMutableArray *result = [NSMutableArray new];
-    [result addObjectsFromArray:[view subviews]];
-    for (UIView *v in [view subviews]) {
-        [result addObjectsFromArray:[self allSubviews:v]];
-    }
-    return result;
-}
-
 @end
